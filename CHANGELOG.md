@@ -1,8 +1,9 @@
-## v1.0.6 - Documentation Refresh
-Patch release for the b64 base64 utility module with updated documentation copy and clearer usage keywords for discoverability.
+## v1.0.7 - Docs Polish
+Concise documentation and site copy for the b64 base64 utility now better highlights the compact helpers and call-outs for encodeJson failure behavior to aid discoverability.
 
 ### Changed
-- Refined README and docs site content for clearer module guidance.
+- Reworded the README and docs landing copy to emphasize the short-string helpers, URL-safe encoding, and low-friction use cases.
+- Clarified the `encodeJson` reference so it notes that it returns an empty string when it cannot encode the input.
 
 ## v1.0.5 - Release Metadata Tune-Up
 Patch release for the b64 base64 utility module with versioning housekeeping and release metadata keywords for discoverability.

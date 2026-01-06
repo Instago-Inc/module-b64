@@ -59,19 +59,19 @@
   <body>
     <main>
       <h1>module/b64 - V8 module</h1>
-      <p class="intro">Simple helpers for turning strings and JSON into Base64 and back, plus URL-safe Base64 for tokens and IDs. This module is designed for small, predictable transformations that are easy to use in workflows and scripts.</p>
+      <p class="intro">A compact set of helpers for turning short strings and JSON into Base64 and back, including a URL-safe variant for tokens and IDs. It is meant for small, predictable transformations inside workflows and scripts.</p>
       <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
       <div class="section">
         <h2>Technical reference</h2>
         <h1>module/b64 - V8 module</h1>
-<p>Simple helpers for turning strings and JSON into Base64 and back, plus URL-safe Base64 for tokens and IDs. This module is designed for small, predictable transformations that are easy to use in workflows and scripts.</p>
-<p>Use it when you want clear, low-friction encoding without relying on Node.js APIs. Learn more at https://instago.ai.</p>
+<p>A compact set of helpers for turning short strings and JSON into Base64 and back, including a URL-safe variant for tokens and IDs. It is meant for small, predictable transformations inside workflows and scripts.</p>
+<p>If you need a simple, dependency-free encoder/decoder in this V8 runtime, this module keeps things straightforward. Learn more at https://instago.ai.</p>
 <h2>Technical reference</h2>
 <h3>Exports</h3>
 <ul>
 <li><code>encodeAscii(str)</code> -&gt; base64 string for ASCII input.</li>
 <li><code>decodeAscii(b64)</code> -&gt; ASCII string from base64 input.</li>
-<li><code>encodeJson(obj)</code> -&gt; base64 string for JSON-serialized input.</li>
+<li><code>encodeJson(obj)</code> -&gt; base64 string for JSON-serialized input, or <code>&#x27;&#x27;</code> on failure.</li>
 <li><code>decodeJson(b64)</code> -&gt; parsed JSON object or <code>null</code> on parse failure.</li>
 <li><code>utf8Bytes(str)</code> -&gt; array of UTF-8 bytes.</li>
 <li><code>b64url(bytes)</code> -&gt; URL-safe base64 string without padding.</li>
@@ -103,7 +103,13 @@ const token = b64.b64urlFromUtf8(&#x27;user:123&#x27;);
       </div>
       <div class="section">
   <h2>Changelog</h2>
-  <h2>v1.0.5 - Release Metadata Tune-Up</h2>
+  <h2>v1.0.6 - Documentation Refresh</h2>
+<p>Patch release for the b64 base64 utility module with updated documentation copy and clearer usage keywords for discoverability.</p>
+<h3>Changed</h3>
+<ul>
+<li>Refined README and docs site content for clearer module guidance.</li>
+</ul>
+<h2>v1.0.5 - Release Metadata Tune-Up</h2>
 <p>Patch release for the b64 base64 utility module with versioning housekeeping and release metadata keywords for discoverability.</p>
 <h3>Changed</h3>
 <ul>
