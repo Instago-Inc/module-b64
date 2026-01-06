@@ -1,3 +1,9 @@
+## v1.0.6 - Documentation Refresh
+Patch release for the b64 base64 utility module with updated documentation copy and clearer usage keywords for discoverability.
+
+### Changed
+- Refined README and docs site content for clearer module guidance.
+
 ## v1.0.5 - Release Metadata Tune-Up
 Patch release for the b64 base64 utility module with versioning housekeeping and release metadata keywords for discoverability.
 

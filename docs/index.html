@@ -59,53 +59,61 @@
   <body>
     <main>
       <h1>module/b64 - V8 module</h1>
-      <p class="intro">Base64 helpers for ASCII/JSON/UTF-8 and URL-safe encoding.</p>
+      <p class="intro">Simple helpers for turning strings and JSON into Base64 and back, plus URL-safe Base64 for tokens and IDs. This module is designed for small, predictable transformations that are easy to use in workflows and scripts.</p>
       <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
       <div class="section">
         <h2>Technical reference</h2>
-        <h1>@instago/b64</h1>
-<p>Base64 helpers for ASCII/JSON/UTF-8 and URL-safe encoding.</p>
+        <h1>module/b64 - V8 module</h1>
+<p>Simple helpers for turning strings and JSON into Base64 and back, plus URL-safe Base64 for tokens and IDs. This module is designed for small, predictable transformations that are easy to use in workflows and scripts.</p>
+<p>Use it when you want clear, low-friction encoding without relying on Node.js APIs. Learn more at https://instago.ai.</p>
+<h2>Technical reference</h2>
+<h3>Exports</h3>
 <ul>
-<li>Version: 1.0.0</li>
-<li>Entry: index.js</li>
-<li>Exports: <code>{ encodeAscii, decodeAscii, encodeJson, decodeJson, utf8Bytes, b64url, b64urlFromUtf8 }</code></li>
-<li>Dependencies: none</li>
+<li><code>encodeAscii(str)</code> -&gt; base64 string for ASCII input.</li>
+<li><code>decodeAscii(b64)</code> -&gt; ASCII string from base64 input.</li>
+<li><code>encodeJson(obj)</code> -&gt; base64 string for JSON-serialized input.</li>
+<li><code>decodeJson(b64)</code> -&gt; parsed JSON object or <code>null</code> on parse failure.</li>
+<li><code>utf8Bytes(str)</code> -&gt; array of UTF-8 bytes.</li>
+<li><code>b64url(bytes)</code> -&gt; URL-safe base64 string without padding.</li>
+<li><code>b64urlFromUtf8(str)</code> -&gt; URL-safe base64 string from UTF-8 input.</li>
 </ul>
-<h2>API</h2>
+<h3>Usage</h3>
 <ul>
-<li><code>encodeAscii(str)</code> / <code>decodeAscii(b64)</code> – standard base64 for ASCII strings.</li>
-<li><code>encodeJson(obj)</code> / <code>decodeJson(b64)</code> – base64-encode JSON payloads.</li>
-<li><code>utf8Bytes(str)</code> – UTF-8 byte array from a string.</li>
-<li><code>b64url(bytes)</code> / <code>b64urlFromUtf8(str)</code> – URL-safe base64 without padding.</li>
+<li>Load with <code>require(&#x27;b64@latest&#x27;)</code>.</li>
+<li>Use <code>encodeAscii</code>/<code>decodeAscii</code> for ASCII-only data.</li>
+<li>Use <code>encodeJson</code>/<code>decodeJson</code> to round-trip JSON payloads.</li>
+<li>Use <code>b64url</code>/<code>b64urlFromUtf8</code> for URL-safe tokens (no <code>+</code>, <code>/</code>, or <code>=</code> padding).</li>
 </ul>
-<h2>Example</h2>
+<h3>Configuration</h3>
+<ul>
+<li>None. <code>env.json</code> declares no required or optional keys.</li>
+</ul>
+<h3>Examples</h3>
 <pre class="code"><code>
-const b64 = require(&#x27;b64@1.0.0&#x27;);
+const b64 = require(&#x27;b64@latest&#x27;);
 
 const encoded = b64.encodeAscii(&#x27;hello&#x27;);
 const decoded = b64.decodeAscii(encoded);
 
+const payload = b64.encodeJson({ a: 1 });
+const obj = b64.decodeJson(payload);
+
 const token = b64.b64urlFromUtf8(&#x27;user:123&#x27;);
 </code></pre>
-<h2>Notes</h2>
-<ul>
-<li>Pure JS, no dependencies.</li>
-</ul>
-<p>--- For more details, visit https://instago.ai.</p>
       </div>
       <div class="section">
   <h2>Changelog</h2>
-  <h2>v1.0.4 - Documentation Page Update</h2>
+  <h2>v1.0.5 - Release Metadata Tune-Up</h2>
+<p>Patch release for the b64 base64 utility module with versioning housekeeping and release metadata keywords for discoverability.</p>
+<h3>Changed</h3>
+<ul>
+<li>Bumped the package version for a patch release.</li>
+</ul>
+<h2>v1.0.4 - Documentation Page Update</h2>
 <p>Patch release for the b64 base64 utility module focusing on documentation page content and presentation, with clearer module keywords for discoverability.</p>
 <h3>Changed</h3>
 <ul>
 <li>Refreshed the docs landing page content and styling.</li>
-</ul>
-<h2>v1.0.4 - Docs Page Refresh</h2>
-<p>Patch release for the b64 base64 utility module with documentation page updates and release metadata keywords for discoverability.</p>
-<h3>Changed</h3>
-<ul>
-<li>Updated documentation page structure and formatting.</li>
 </ul>
 <h2>v1.0.3 - Release Metadata Refresh</h2>
 <p>Patch release for the b64 base64 utility module with versioning metadata updates and release hygiene keywords.</p>
