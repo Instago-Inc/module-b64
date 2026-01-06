@@ -1,0 +1,17 @@
+{
+  "name": "@instago/b64",
+  "version": "1.0.5",
+  "description": "Module b64",
+  "main": "index.js",
+  "type": "commonjs",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "instago",
+    "b64"
+  ],
+  "files": [
+    "index.js",
+    "ReadMe.MD",
+    "LICENSE"
+  ]
+}
