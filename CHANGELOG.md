@@ -1,3 +1,10 @@
+## v1.0.8 - Docs & QA polish
+Updated the b64 README and docs landing copy to highlight the compact Base64 helpers and encodeJson failure behavior, and aligned the test harness to the latest tags so CI mirrors the newest release guidance.
+
+### Changed
+- Reworded the README/docs copy to freshen the Base64 helper story and clarify encodeJson’s empty-string fallback.
+- Pointed the test harness to `latest` dependency tags so the suite reflects current module behavior alongside the documentation.
+
 ## v1.0.7 - Docs Polish
 Concise documentation and site copy for the b64 base64 utility now better highlights the compact helpers and call-outs for encodeJson failure behavior to aid discoverability.
 

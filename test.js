@@ -1,5 +1,5 @@
-const t = require('utest@1.0.0');
-const b64 = require('b64@1.0.0');
+const t = require('utest@latest');
+const b64 = require('b64@latest');
 
 t.test('ascii encode/decode', () => {
   const enc = b64.encodeAscii('hello');
